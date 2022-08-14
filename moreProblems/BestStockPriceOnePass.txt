@@ -1,0 +1,14 @@
+//Best Time to buy and sell stock using One pass ie finding the difference between the steepest valley and the next price value
+public class Solution {
+	public int maxProfit(int[] prices) {
+		int minprice = Integer.MAX_VALUE;
+		int maxprofit = 0;
+		for(int i = 0; i < prices.length; i++) {
+			if(prices[i] < minprice)
+				minprice = prices[i];
+			else if(prices[i] - minprice > maxprofit)
+				maxprofit = prices[i] - minprice;
+		}
+		return maxprofit;
+	}
+}
