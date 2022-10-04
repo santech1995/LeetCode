@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Page</title>
+    <div style="background-color: #D3D3D3; padding: 20px;">
+        <header>
+            <center>
+                <h4>Question 1</h4>
+            </center>
+        </header>
+    </div>
+</head>
+<body>
+<div>
+    <p>
+        Given points (x1,y1) and (x2,y2) select the formula to find the equation of the given line.
+    </p>
+</div>
+<div>
+    <table cellspacing="20">
+        <tr>
+            <br>
+            <br>
+            <br>
+            <br>
+            <td>
+                <input type="radio">
+                <math>
+                    <mrow>
+                        <mi>y</mi>
+                        <mo>=</mo>
+                        <mi>mx</mi>
+                        <mo>+</mo>
+                        <mi>b</mi>
+                    </mrow>
+                    
+                </math>
+            </td>
+            <td>
+                <input type="radio">
+                <math>
+                    <msup>
+                        <mrow>
+                            <mo>(</mo>
+                            <mi>x</mi>
+                            <mo>-</mo>
+                            <mi>h</mi>
+                            <mo>)</mo>
+                        </mrow>
+                        2
+                    </msup>
+                    <mo>+</mo>
+                    <msup>
+                        <mrow>
+                            <mo>(</mo>
+                            <mi>y</mi>
+                            <mo>-</mo>
+                            <mi>k</mi>
+                            <mo>)</mo>
+                        </mrow>
+                        2
+                    </msup>
+                    <mo>=</mo>
+                    <msup>
+                        <mi>r</mi>
+                        2
+                    </msup>
+                </math>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="radio">
+                <mi>y</mi>
+                <mo>-</mo>
+                <msub>
+                    <mi>y</mi>
+                    <sub>1</sub>
+                </msub>
+                <mo>=</mo>
+                <mi>m</mi>
+                <mo>(</mo>
+                <mi>x</mi>
+                <mo>-</mo>
+                <msub>
+                    <mi>x</mi>
+                    <sub>1</sub>
+                </msub>
+                <mo>)</mo>
+            </td>
+            <td>
+                <input type="radio">
+                <mi>y</mi>
+                <mo>-</mo>
+                <msub>
+                    <mi>y</mi>
+                    <sub>2</sub>
+                </msub>
+                <mo>=</mo>
+                <mfrac>
+                    <sup>
+                        <msub>
+                            <mi>y</mi>
+                            <sub>2</sub>
+                        </msub>
+                        <mo>-</mo>
+                        <msub>
+                            <mi>y</mi>
+                            <sub>1</sub>
+                        </msub>
+                    </sup>
+                    &frasl;
+                    <sub>
+                        <msub>
+                            <mi>x</mi>
+                            <sub>2</sub>
+                        </msub>
+                        <mo>-</mo>
+                        <msub>
+                            <mi>x</mi>
+                            <sub>1</sub>
+                        </msub>
+                    </sub>    
+                </mfrac>
+                <mo>(</mo>
+                <mi>x</mi>
+                <mo>-</mo>
+                <msub>
+                    <mi>x</mi>
+                    <mn>2</mn>
+                </msub>
+                <mo>)</mo>
+            </td>
+
+        </tr>
+    </table>
+</div>
+<div>
+    <hr class="line1">
+    <hr class="line2">
+    <hr class="line2a">
+    <hr class="line2b">
+    <hr class="line3">
+    <hr class="line3a">
+    <hr class="line3b">
+    <!-- <div id="circle"></div> -->
+</div>
+<div>
+    <table cellspacing="20">
+        <tr>
+            <td>
+                <button id="myButton">Submit & Next Question</button>
+            </td>
+            <td>
+                <button>Cancel & Clear Selection</button>
+            </td>
+        </tr>
+    </table>  
+</div>
+<script type="text/javascript">
+    document.getElementById("myButton").onclick = function () {
+    window.Location = "file:///D:/CMPE%202022/CMPE280/HTMLAssignments/cosine.html";
+    };
+</script> 
+</body>
+
+</html>
+<style>
+    .line1 {
+        width: 250px;
+        -webkit-transform: rotate(135deg);
+        transform-origin: 231px 27px;
+    }
+    .line2 {
+        width: 200px;
+        -webkit-transform: rotate(90deg);
+        transform-origin: 180px 30px;
+    }
+    .line2a {
+        width: 10px;
+        -webkit-transform: rotate(50deg);
+        transform-origin: 230px 43px;
+    }
+    .line2b {
+        width: 10px;
+        -webkit-transform: rotate(135deg);
+        transform-origin: 92px -60px;
+    }
+    .line3 {
+        width: 220px;
+        -webkit-transform: rotate(180deg);
+        transform-origin: 220px 11px;
+    }
+    .line3a {
+        width: 10px;
+        -webkit-transform: rotate(35deg);
+        transform-origin: 157px 514px;
+    }
+    .line3b {
+        width: 10px;
+        -webkit-transform: rotate(135deg);
+        transform-origin: 167px 70px;
+    }
+    /* #circle {
+        height: 5px;
+        width: 5px;
+        background-color: red;
+        border-radius: 50%;
+        transform-origin: 167px 70px;
+    } */
+</style>
