@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English SCO</title>
+    <div style="background-color: #D3D3D3; padding: 20px;">
+        <header>
+            <center>
+                <h4>Question 3</h4>
+            </center>
+        </header>
+    </div>
+</head>
+<body>
+    <br>
+    <div>
+        <p>As per the latest twitter news, complete the article snippet given by selecting 
+            appropriate choices for the blanks.</p>
+    </div>
+    <div>
+        <p>Twitter wants more cash. The company announced two $<mark id="option1" onclick="option1()">_______</mark> million debt offerings in a filing today,
+            each with a potential $100 increase provided that the sales are oversubscribed. Assuming full tip,
+            including the $100 million boosters, <mark id="option2" onclick="option2()">_____________ </mark> will raise up to $1.5 billion with the two offerings. 
+        </p>
+    </div>
+    <br>
+    <div id="opt1" style="display: none;">
+        <table>
+            <tr>
+                <td>
+                    <input type="radio">
+                    Option 1 Mark 1: $650
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="radio">
+                    Option 2 Mark 1: $550
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="radio">
+                    Option 3 Mark 1: $550
+                </td>
+            </tr>
+        </table>
+    </div>
+    <br>
+    <br>
+    <div id="opt2" style="display: none;">
+        <table>
+            <tr>
+                <td>
+                    <input type="radio">
+                    Option 1 Mark 2: Twitter
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="radio">
+                    Option 2 Mark 2: Google
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="radio">
+                    Option 3 Mark 2: Facebook
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        function option1() {
+            document.getElementById("opt1").style.display = "block";
+        }
+        function option2() {
+            document.getElementById("opt2").style.display = "block";
+        }
+    </script>
+    <br>
+    <br>
+    <div>
+        <table cellspacing="20">
+            <tr>
+                <td>
+                    <button id="myButton">Submit & Next Question</button>
+                </td>
+                <td>
+                    <button>Cancel & Clear Selection</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script type="text/javascript">
+        document.getElementById("myButton").onclick = function () {
+        window.Location = "file:///D:/CMPE%202022/CMPE280/HTMLAssignments/audioVideo.html";
+        };
+    </script>
+</body>
+</html>
