@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and drop</title>
+    <script>
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+
+        function dragStart(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+
+        function dragDrop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            var nodeCopy = document.getElementById(data).cloneNode(true);
+            nodeCopy.id = ev.target.id; /* We cannot use the same ID */
+            ev.target.appendChild(nodeCopy);
+            // ev.target.appendChild(document.getElementById(data)); 
+        }
+    </script>
+    <style>
+        .triangle-up {
+            width: 0;
+            height: 0;
+            border-left: 25px solid transparent;
+            border-right: 25px solid transparent;
+            border-bottom: 50px solid rgb(85, 224, 224);
+        }
+
+        .rectangle {
+            height: 50px;
+            width: 100px;
+            background-color: rgb(85, 224, 224);
+        }
+
+        .circle {
+            height: 50px;
+            width: 50px;
+            background-color: rgb(85, 224, 224);
+            border-radius: 50%;
+        }
+
+        .arrow-rectangle {
+            height: 20px;
+            width: 60px;
+            background-color: rgb(85, 224, 224);
+        }
+
+        .arrow-right-triangle {
+            width: 0;
+            height: 0;
+            border-top: 25px solid transparent;
+            border-left: 50px solid rgb(85, 224, 224);
+            border-bottom: 25px solid transparent;
+        }
+
+        .box1 {
+            /* background-color: whitesmoke; */
+            width: 500px;
+            height: 500px;
+            border: 1px solid black;
+            left: 130px;
+            top: 120px;
+            text-align: center;
+            line-height: 250px;
+            position: absolute;
+        }
+    </style>
+
+</head>
+
+<body>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div id="head">
+        <center>Drag and Drop Control Palette HTML Driver</center>
+    </div>
+    <hr style="color: rgb(0, 204, 255);">
+    <br>
+    <br>
+    <div id="dragthisRect" class="rectangle" draggable="true" ondragstart="dragStart(event)"></div>
+    <br>
+    <div id="dragthisCircle" class="circle" draggable="true" ondragstart="dragStart(event)"></div>
+    <br>
+    <div id="dragthisTriangle" class="triangle-up" draggable="true" ondragstart="dragStart(event)"></div>
+    <br>
+    <div id="dragthisArrow" draggable="true" ondragstart="dragStart(event)">
+        <table>
+            <tr>
+                <td>
+                    <div class="arrow-rectangle"></div>
+                </td>
+                <td>
+                    <div class="arrow-right-triangle"></div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="drophere" class="box box1" ondragover="allowDrop(event)" ondrop="dragDrop(event)">Drop here</div>
+
+</body>
+
+</html>
