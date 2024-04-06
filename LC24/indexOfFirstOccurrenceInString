@@ -1,0 +1,24 @@
+//Given two strings needle and haystack, return the index of the first occurrence of needle in haystack, or -1 if needle is not part of 
+haystack.
+
+class Solution {
+	public int firstOccurrence(String haystack, String needle){
+		int count = 0; //tracks needle
+		for(int i = 0; i < haystack.length(); i++){
+			//i tracks haystack
+			if(haystack.charAt(i) == needle.charAt(count)){
+				count++;
+			}
+			else if(haystack.charAt(i) != needle.charAt(count)){
+				i -= count;
+				count = 0;
+				//reset both pointers to 0 to start comparing from the beginning
+			}
+			if(count == needle.length){
+				//if the entire string in needle is traversed
+				return i -= count - 1;
+			}
+		}
+		return -1;
+	}
+}
