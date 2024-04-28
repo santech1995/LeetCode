@@ -1,0 +1,27 @@
+//Given an array nums of size n, return the majority element.The majority element is the element that appears more than ⌊n / 2⌋ times. You 
+may assume that the majority element always exists in the array.
+
+
+class Solution {
+	public int majorityElement(int[] nums){
+		//Moore's Voting Algorithm
+		//If an element occurs more than other elements in an array, then it will always occur more than n/2 times,
+		//it will always have a frequency counter of its occurrence greater than 0, even if other elements make the counter zero,
+ 		//it will always be in the lead
+		
+		int count = 0;
+		int majority_element = 0;
+		for(int num : nums){
+			if(count == 0){
+				majority_element = num;
+			}
+			if(num == majority_element){
+				count++;
+			}
+			else {
+				count--;
+			}
+		}
+		return majority_element;
+	}
+} 
