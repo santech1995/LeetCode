@@ -1,0 +1,27 @@
+//Letter Combinations of a Phone Number
+//Given a string containing digits from 2-9 inclusive, return all possible letter combinations that the number could represent. Return the 
+answer in any order.A mapping of digits to letters (just like on the telephone buttons) is given below. Note that 1 does not map to any 
+letters.
+
+class Solution {
+	public List<String> letterCombinations(String digits){
+		if(digits.isEmpty()){
+			return Collections.emptyList();
+		}
+		String[] phone_map = {"abc","def","ghi","jkl","mno","pqrs","tuv","wxyz"};
+		List<String> output = new ArrayList<>();
+		backtrack("", phone_map, digits, output);
+		return output;
+	}
+	private void backtrack(String combination, String[] phone_map, String new_digits, List<String> output){
+		if(new_digits.isEmpty()) {
+			output. add(combination);
+		}
+		else {
+			String letters = phone_map[new_digits.charAt(0) - '2'];
+			for(char letter : letters.toCharArray()){
+				backtrack(combination + letter, phone_map, new_digits.substring(1), output);
+			}
+		}
+	}
+} 
